@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-version="1.1.5"
 prog=$(basename "$0")
 [ "$YZF_USE_DEFAULT" = 1 ] || unset FZF_DEFAULT_OPTS
 
@@ -230,7 +229,6 @@ upgrade() {
 help() {
 	cat <<EOF
 Info:
-    $prog v$version
     A package search TUI for Yay, powered by fzf.
     It can install, upgrade, and remove packages.
 
