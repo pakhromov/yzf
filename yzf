@@ -245,7 +245,7 @@ Multiple Selection:
 Options:
     h -> Print this message
     u -> Upgrade upgradable packages
-    x -> Remove recently installed packages
+    r -> Remove recently installed packages
     o -> Remove orphan packages
 EOF
 }
@@ -259,7 +259,7 @@ invalid_option() {
 case "$1" in
 "")          printf "usage: %s <query>\n" "$prog" >&2 ;;
 -u | u)      [ -n "$2" ] && invalid_option; upgrade ;;
--x | x)      [ -n "$2" ] && invalid_option; remove_recent ;;
+-r | r)      [ -n "$2" ] && invalid_option; remove_recent ;;
 -o | o)      [ -n "$2" ] && invalid_option; remove_orphans ;;
 -h | h | --help) [ -n "$2" ] && invalid_option; help ;;
 *)           search_install "$@" ;;
