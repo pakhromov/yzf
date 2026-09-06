@@ -1,4 +1,12 @@
-An [fzf](https://github.com/junegunn/fzf) wrapper around [yay](https://github.com/Jguer/yay).
+A wrapper for [yay](https://github.com/Jguer/yay) AUR helper that replaces number-based package selection with interactive [fzf](https://github.com/junegunn/fzf) while keeping the original formatting.
+
+## Installation
+
+Install from the [AUR](https://aur.archlinux.org/packages/yzf):
+
+```sh
+yay -S yzf
+```
 
 ## Usage
 
@@ -11,6 +19,18 @@ yzf h         Help
 ```
 
 Every option also accepts a dash (`yzf -u`, `yzf -r`, `yzf -o`, `yzf --help`).
+
+Keybinds inside the list:
+
+| Key | Action | Available in |
+| --- | --- | --- |
+| TAB / CTRL+I | Select / deselect a package | all modes |
+| CTRL+A | Select / deselect everything | upgrade, orphans |
+| ALT+ENTER | Open the upstream URL of the selection in a browser | search, upgrade |
+| ENTER | Run the action on the selection | all modes |
+| ESC / CTRL+C | Quit without doing anything | all modes |
+
+With nothing selected, `ENTER` and `ALT+ENTER` act on the highlighted package.
 
 ## Search & install
 
